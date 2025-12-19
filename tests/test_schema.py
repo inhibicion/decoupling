@@ -1,5 +1,5 @@
 import pytest
-from ..decoupling.models.depth_independent import default_schema, check_schema_features
+from decoupling.models.depth_independent import default_schema, check_schema_features
 
 
 def test_default_schema_structure():
