@@ -1,0 +1,307 @@
+neuron_id,morph_status,ephys_status,normalized_soma_depth,layer,m_type,e_type,m_cluster,e_cluster,me_cluster,mol_id,pred_mol_id
+20071002B,complete,available,0.032390725,L1,Neurogliaform,Adapt./irreg. spiking,1,7,17,,PV-/SST-/VIP-
+20080516A,complete,available,0.082522819,L2/3,Neurogliaform,Adapting,1,6,17,,PV-/SST-/VIP-
+20080703C,complete,available,0.038624342,L1,Neurogliaform,Adapt./irreg. spiking,1,6,17,,PV-/SST-/VIP-
+20080708A,complete,available,0.045302029,L1,Neurogliaform,Irregular spiking,1,6,17,,PV-/SST-/VIP-
+20080717B,complete,available,0.049689032,L1,Neurogliaform,Irregular spiking,1,11,17,,PV-/SST-/VIP-
+20080721A,complete,available,0.031664869,L1,Neurogliaform,Irregular spiking,1,11,17,,PV-/SST-/VIP-
+20080729A,complete,available,0.033036263,L1,Neurogliaform,Regular spiking,1,6,17,,PV-/SST-/VIP-
+20080729C,complete,available,0.051414739,L1,Neurogliaform,Irregular spiking,1,6,17,,PV-/SST-/VIP-
+20080902C,complete,available,0.063349745,L1,Neurogliaform,Irregular spiking,1,3,17,,PV-/SST-/VIP-
+20080904A,complete,available,0.054074802,L1,Neurogliaform,Adapt./irreg. spiking,1,6,17,,PV-/SST-/VIP-
+20010518A,complete,available,0.179418774,L2/3,Large Basket,Regular spiking,2,10,1,,PV+
+20010529B,complete,available,0.192248892,L2/3,Large Basket,Adapt./irreg. spiking,2,2,1,,PV+
+20010530B,complete,available,0.189125069,L2/3,Bitufted,Irregular spiking,3,2,18,,VIP+
+20010626D,complete,available,0.19282551,L2/3,Small Basket,Fast spiking,2,12,1,,PV+
+20010710B,complete,available,0.159303024,L2/3,Small Basket,Adapting,5,7,20,,PV-/SST-/VIP-
+20010910A,complete,available,0.249325518,L2/3,Large Basket,Fast spiking,2,10,1,,PV+
+20010912A,complete,available,0.194486543,L2/3,Bitufted,Irregular spiking,3,4,18,,VIP+
+20010918C,complete,available,0.232301962,L2/3,Large Basket,Adapting,11,7,19,,SST+
+20010919A,axon_only,available,0.154758477,L2/3,Small Basket,Regular spiking,,7,,,
+20010925B,complete,available,0.184475971,L2/3,Neurogliaform,Regular spiking,5,10,20,,PV-/SST-/VIP-
+20010926A,complete,available,0.204183243,L2/3,Bitufted,Adapt./irreg. spiking,3,2,18,,VIP+
+20011001A,axon_only,available,0.217410997,L2/3,Large Basket,Regular spiking,,10,,,
+20011002B,complete,available,0.215108688,L2/3,Neurogliaform,Adapting,5,7,20,,PV-/SST-/VIP-
+20011004A,complete,available,0.227549973,L2/3,Bitufted,Adapt./irreg. spiking,4,7,19,,VIP+
+20011008A,complete,available,0.224824267,L2/3,Neurogliaform,Regular spiking,5,4,9,,PV-/SST-/VIP-
+20011009A,complete,available,0.160251015,L2/3,Large Basket,Irregular spiking,4,7,19,,SST+
+20011010A,complete,available,0.212540465,L2/3,Bitufted,Adapting,3,7,19,,VIP+
+20011011C,complete,available,0.199106972,L2/3,Large Basket,Regular spiking,5,10,20,,PV-/SST-/VIP-
+20011106A,complete,available,0.108621959,L2/3,Bitufted,Adapting,4,7,19,,VIP+
+20011108A,axon_only,available,0.143709787,L2/3,Chandelier,Fast spiking,,8,,,
+20011109A,complete,available,0.150810545,L2/3,Martinotti,Fast spiking,2,7,1,,PV+
+20011109B,complete,available,0.115919671,L2/3,Chandelier,Fast spiking,16,8,7,,PV+
+20011113A,complete,available,0.154727273,L2/3,Neurogliaform,Regular spiking,5,7,20,,PV-/SST-/VIP-
+20011114A,complete,available,0.180841824,L2/3,Martinotti,Fast spiking,2,7,1,,PV+
+20020325B,complete,available,0.111250639,L2/3,Bitufted,Adapt./irreg. spiking,3,5,18,,VIP+
+20020326A,complete,available,0.154176635,L2/3,Bitufted,Irregular spiking,3,7,18,,VIP+
+20020404A,complete,available,0.094837058,L2/3,Bitufted,Irregular spiking,4,4,9,,SST+
+20021125A,complete,available,0.172209092,L2/3,Neurogliaform,Fast spiking,5,7,20,,PV-/SST-/VIP-
+20021127A,complete,available,0.192783263,L2/3,Large Basket,Adapting,2,7,1,,PV+
+20021128A,complete,available,0.146620873,L2/3,Bitufted,Adapting,3,7,19,,VIP+
+20021202A,complete,available,0.223740246,L2/3,Large Basket,Regular spiking,2,7,1,,PV+
+20021209A,complete,missing,0.16011426,L2/3,Bitufted,,3,,,,
+20021209B,complete,available,0.165050322,L2/3,Bitufted,Adapting,4,7,19,,SST+
+20021210A,complete,available,0.124110587,L2/3,Bitufted,Adapting,3,7,19,,VIP+
+20030215A,complete,available,0.18375955,L2/3,Large Basket,Adapting,2,6,1,,VIP+
+20030221A,complete,available,0.116210914,L2/3,Bitufted,Irregular spiking,3,5,18,,VIP+
+20030224A,complete,available,0.159650364,L2/3,Bitufted,Regular spiking,3,7,19,,VIP+
+20030224B,complete,available,0.105506695,L2/3,Martinotti,Irregular spiking,3,4,9,,SST+
+20030319A,complete,available,0.127391573,L2/3,Large Basket,Fast spiking,2,10,1,,PV+
+20030320B,complete,available,0.216311731,L2/3,Small Basket,Fast spiking,2,8,1,,PV+
+20030324B,complete,available,0.112844662,L2/3,Martinotti,Fast spiking,2,9,1,,VIP+
+20031201A,complete,available,0.147296296,L2/3,Large Basket,Fast spiking,2,10,1,,PV+
+20031202A,complete,available,0.183181321,L2/3,Bitufted,Fast spiking,3,10,19,,VIP+
+20031202B,complete,available,0.278257089,L2/3,Small Basket,Fast spiking,6,7,2,,VIP+
+20031203A,complete,available,0.096686115,L2/3,Large Basket,Fast spiking,4,10,19,,SST+
+20031203B,complete,available,0.113407093,L2/3,Bitufted,Irregular spiking,4,4,9,,SST+
+20031203C,complete,available,0.150125383,L2/3,Bitufted,Adapting,3,7,19,,VIP+
+20031203D,complete,available,0.111837701,L2/3,Bitufted,Adapting,3,7,19,,VIP+
+20040212B,complete,available,0.144803632,L2/3,Large Basket,Irregular spiking,3,4,9,,SST+
+20040212C,complete,available,0.127751722,L2/3,Martinotti,Fast spiking,2,10,1,,PV+
+20040214B,complete,available,0.133067066,L2/3,Small Basket,Fast spiking,3,8,1,,PV+
+20031130B,complete,available,0.318736449,L4,Small Basket,Fast spiking,6,8,3,,PV+
+20031213A,complete,available,0.378415939,L4,Translaminar,Fast spiking,10,8,21,,PV+
+20031214B,complete,available,0.279292628,L2/3,Translaminar,Fast spiking,10,10,21,,PV+
+20040107A,complete,available,0.380206571,L4,Small Basket,Adapting,10,7,2,,VIP+
+20040107B,complete,available,0.351709707,L4,Small Basket,Irregular spiking,6,2,22,,VIP+
+20040112A,complete,available,0.368618825,L4,Small Basket,Irregular spiking,7,2,2,,PV+
+20040113A,complete,available,0.400416017,L4,Small Basket,Fast spiking,9,12,2,,PV+
+20040113B,complete,available,0.387080287,L4,Small Basket,Fast spiking,6,8,3,,PV+
+20040113C,complete,available,0.450036135,L5,Small Basket,Fast spiking,9,8,3,,PV+
+20040115A,complete,available,0.374906411,L4,Small Basket,Fast spiking,6,8,3,,PV+
+20040116A,complete,available,0.379675191,L4,Small Basket,Fast spiking,6,8,3,,PV+
+20040119A,complete,available,0.334847686,L4,Large Basket,Fast spiking,6,8,3,,PV+
+20040202A,complete,available,0.33538604,L4,Translaminar,Fast spiking,10,8,21,,PV+
+20040202C,complete,available,0.383228345,L4,Large Basket,Fast spiking,7,12,2,,PV+
+20040203B,complete,available,0.378149668,L4,Large Basket,Fast spiking,10,8,21,,PV+
+20040203C,complete,available,0.366612966,L4,Bitufted,Fast spiking,4,8,19,,VIP+
+20040205B,complete,available,0.292261624,L4,Small Basket,Fast spiking,6,8,3,,PV+
+20040205C,complete,available,0.36891624,L4,Small Basket,Fast spiking,18,8,3,,PV+
+20040208A,complete,available,0.333896697,L4,Small Basket,Fast spiking,7,8,3,,PV+
+20040209A,complete,available,0.357093217,L4,Translaminar,Fast spiking,10,8,21,,PV+
+20040210B,complete,available,0.425321599,L4,Small Basket,Fast spiking,9,8,3,,PV+
+20040504A,complete,available,0.415928665,L4,Small Basket,Fast spiking,6,12,4,,PV+
+20040506A,complete,available,0.356378861,L4,Small Basket,Fast spiking,6,13,4,,PV+
+20040506B,complete,available,0.375309946,L4,Small Basket,Fast spiking,6,13,4,,PV+
+20040507A,complete,available,0.338507723,L4,Small Basket,Fast spiking,6,12,4,,VIP+
+20040508A,complete,available,0.388263923,L4,Small Basket,Fast spiking,6,12,4,,PV+
+20040510A,complete,available,0.350257591,L4,Large Basket,Fast spiking,10,12,2,,VIP+
+20040511A,complete,available,0.333702674,L4,Small Basket,Fast spiking,10,12,2,,VIP+
+20040512A,complete,available,0.414139441,L4,Small Basket,Fast spiking,6,12,4,,PV+
+20040601A,complete,available,0.332910105,L4,Small Basket,Fast spiking,6,12,2,,VIP+
+20040608A,complete,available,0.357578802,L4,Small Basket,Fast spiking,7,13,2,,PV+
+20040622A,complete,available,0.387304464,L4,Small Basket,Fast spiking,6,12,4,,PV+
+20040630B,complete,available,0.329207943,L4,Martinotti,Fast spiking,13,12,4,,PV+
+20040701A,complete,available,0.391671801,L4,Small Basket,Irregular spiking,6,2,4,,PV+
+20040703A,complete,available,0.351591819,L4,Large Basket,Fast spiking,6,13,4,,PV+
+20040703B,axon_only,available,0.386079302,L4,Large Basket,Fast spiking,,12,,,
+20040707A,complete,available,0.364899935,L4,Small Basket,Fast spiking,7,13,2,,PV+
+20040709A,complete,available,0.335012119,L4,Martinotti,Fast spiking,7,12,2,,PV+
+20040712A,complete,available,0.34587136,L4,Small Basket,Fast spiking,7,12,2,,PV+
+20040806A,complete,available,0.424066345,L4,Small Basket,Fast spiking,8,12,15,,VIP+
+20040810B,complete,available,0.42543451,L4,Small Basket,Fast spiking,6,12,4,,PV+
+20040811A,complete,available,0.398967167,L4,Bitufted,Adapting,8,12,15,,VIP+
+20040823A,complete,available,0.336050545,L4,Translaminar,Fast spiking,10,12,2,,PV+
+20040901A,complete,available,0.400295004,L4,Small Basket,Fast spiking,6,13,2,,PV+
+20040903A,complete,available,0.356577495,L4,Small Basket,Fast spiking,10,12,2,,VIP+
+20160201C,complete,available,0.316633368,L4,Translaminar,Fast spiking,10,10,21,,PV+
+20170512B,complete,available,0.314464917,L4,Translaminar,Fast spiking,2,8,21,,PV+
+20120621B,complete,available,0.369733068,L4,Translaminar,Fast spiking,10,8,21,,PV+
+20110530F,complete,available,0.40301312,L4,Large Basket,Irregular spiking,8,7,11,,VIP+
+20111209D,complete,available,0.416636445,L4,Large Basket,Adapt./irreg. spiking,8,4,12,,SST+
+20120209A,complete,available,0.439892389,L4,Large Basket,Adapt./irreg. spiking,9,3,12,,SST+
+20120301A,complete,available,0.430992039,L4,Small Basket,Adapt./irreg. spiking,9,3,12,,SST+
+20120830F,complete,available,0.385293671,L4,Martinotti,Adapt./irreg. spiking,8,3,12,,SST+
+20130207C,complete,available,0.372519818,L4,Neurogliaform,Adapting,6,7,11,,PV-/SST-/VIP-
+20130221A,complete,available,0.367679211,L4,Large Basket,Adapting,10,7,11,,SST+
+20130222A,complete,available,0.42630983,L4,Large Basket,Irregular spiking,9,4,12,,SST+
+20130311C,complete,available,0.396323726,L4,Small Basket,Adapting,8,4,12,,SST+
+20130318C,complete,available,0.403279915,L4,Small Basket,Adapting,8,4,12,,SST+
+20130403A,complete,available,0.416046246,L4,Large Basket,Adapting,10,7,10,,SST+
+20130403B,complete,available,0.408019389,L4,Large Basket,Adapting,8,7,11,,VIP+
+20130405C,complete,available,0.449992635,L5,Large Basket,Adapting,9,7,11,,SST+
+20130430D,complete,available,0.348024168,L4,Bitufted,Regular spiking,12,7,19,,SST+
+20130503A,complete,available,0.396042662,L4,Neurogliaform,Regular spiking,8,7,11,,PV-/SST-/VIP-
+20130514A,complete,available,0.395222366,L4,Small Basket,Adapting,7,7,11,,VIP+
+20130705A,complete,available,0.436805133,L4,Large Basket,Regular spiking,8,7,20,,PV+
+20130805A,complete,available,0.392565175,L4,Martinotti,Adapting,8,7,11,,VIP+
+20130819B,complete,available,0.330353794,L4,Large Basket,Regular spiking,10,7,11,,SST+
+20130916B,complete,available,0.351885023,L4,Large Basket,Adapting,10,3,12,,SST+
+20140212B,complete,available,0.422777486,L4,Small Basket,Adapting,6,4,12,,SST+
+20140213F,complete,available,0.387269598,L4,Large Basket,Adapt./irreg. spiking,8,4,12,,SST+
+20140219A,complete,available,0.404558729,L4,Martinotti,Adapting,8,2,12,,SST+
+20140224A,complete,available,0.397604334,L4,Neurogliaform,Regular spiking,8,4,11,,PV-/SST-/VIP-
+20140226A,complete,available,0.381942937,L4,Martinotti,Fast spiking,2,7,10,,SST+
+20150106A,complete,available,0.374442737,L4,Small Basket,Adapting,8,7,11,,VIP+
+20150112A,complete,available,0.412719326,L4,Martinotti,Irregular spiking,8,4,12,,VIP+
+20150319A,complete,available,0.358097297,L4,Martinotti,Adapting,8,3,12,,SST+
+20150330C,complete,available,0.359960728,L4,Martinotti,Adapting,10,4,11,,SST+
+20150330E,complete,available,0.429936219,L4,Martinotti,Adapting,9,4,12,,SST+
+20150410A,complete,available,0.347146815,L4,Large Basket,Regular spiking,10,4,11,,PV-/SST-/VIP-
+20150416A,complete,available,0.400196672,L4,Martinotti,Adapting,8,4,12,SST+,SST+
+20150721A,complete,available,0.400708081,L4,Bitufted,Irregular spiking,12,4,9,,SST+
+20150925A,complete,available,0.40516817,L4,Bitufted,Irregular spiking,10,2,22,,SST+
+20160115E,complete,available,0.34562615,L4,Large Basket,Adapting,10,7,11,,SST+
+20160201B,complete,available,0.336242802,L4,Large Basket,Adapting,6,7,2,,VIP+
+20160212C,complete,available,0.3226092,L4,Large Basket,Adapting,10,7,2,,VIP+
+20160311D,complete,available,0.333340198,L4,Large Basket,Adapting,10,4,12,,SST+
+20160620B,complete,available,0.409717619,L4,Large Basket,Adapting,9,7,11,,SST+
+20170406B,complete,available,0.35573208,L4,Small Basket,Regular spiking,6,7,2,PV-/SST-,VIP+
+20170412A,complete,available,0.382478563,L4,Bitufted,Regular spiking,14,4,19,PV-/SST-,VIP+
+20170419I,complete,available,0.368048007,L4,Large Basket,Adapting,10,4,11,SST+,SST+
+20170419L,complete,available,0.40523634,L4,Martinotti,Adapting,10,7,11,SST+,SST+
+20170425A,complete,available,0.435560506,L4,Martinotti,Fast spiking,2,7,10,SST+,SST+
+20170426E,complete,available,0.403589825,L4,Martinotti,Adapting,10,7,11,SST+,SST+
+20170509E,complete,available,0.381758045,L4,Large Basket,Adapting,10,7,11,SST+,SST+
+20170512F,complete,available,0.398195686,L4,Martinotti,Regular spiking,2,7,10,,SST+
+20170519B,complete,available,0.360363655,L4,Bitufted,Adapting,10,7,10,,SST+
+20120816A,complete,available,0.440492502,L4,Bitufted,Adapting,9,2,12,,SST+
+20170630B,complete,available,0.364256464,L4,Bitufted,Adapting,4,2,18,,VIP+
+20110106B,complete,missing,0.569593538,L5,Large Basket,,11,,,,
+20110110B,complete,missing,0.709943862,L5,Translaminar,,19,,,,
+20120105A,complete,available,0.441376063,L4,Martinotti,Adapting,15,7,10,,SST+
+20120105C,complete,available,0.486486546,L5,Martinotti,Adapting,12,7,10,,PV+
+20120106A,complete,available,0.445323622,L4,Small Basket,Fast spiking,6,10,5,,PV+
+20120106B,complete,available,0.496806876,L5,Large Basket,Fast spiking,12,10,5,,PV+
+20120106C,complete,available,0.487981046,L5,Large Basket,Fast spiking,12,10,5,,PV+
+20120106D,complete,available,0.539259496,L5,Large Basket,Fast spiking,12,10,5,,PV+
+20120106E,complete,available,0.52870223,L5,Large Basket,Fast spiking,14,7,25,,PV+
+20120530A,complete,available,0.439145518,L4,Martinotti,Fast spiking,12,10,5,,PV+
+20120530B,complete,available,0.416102222,L4,Small Basket,Fast spiking,6,10,3,,PV+
+20120603A,complete,available,0.485689611,L5,Martinotti,Regular spiking,15,7,10,,VIP+
+20120604A,complete,available,0.472810897,L5,Large Basket,Fast spiking,12,10,5,,PV+
+20120605A,complete,available,0.530400191,L5,Large Basket,Irregular spiking,12,1,6,,PV+
+20120605B,complete,available,0.475190291,L5,Martinotti,Adapting,2,7,10,,SST+
+20120605C,complete,available,0.511039745,L5,Large Basket,Fast spiking,12,13,5,,PV+
+20120605D,complete,available,0.510009526,L5,Large Basket,Fast spiking,12,10,5,,PV+
+20120605E,complete,available,0.667281567,L5,Neurogliaform,Regular spiking,5,7,20,,PV-/SST-/VIP-
+20120605F,complete,available,0.519235101,L5,Small Basket,Regular spiking,5,7,20,,PV-/SST-/VIP-
+20120605G,complete,available,0.513926205,L5,Martinotti,Fast spiking,12,10,5,,PV+
+20120605H,complete,available,0.508983894,L5,Small Basket,Irregular spiking,12,1,6,,PV+
+20070728B,complete,available,0.630829552,L5,Large Basket,Fast spiking,11,10,5,,PV+
+20070730A,complete,available,0.598843523,L5,Large Basket,Fast spiking,11,10,5,,PV+
+20070730D,complete,available,0.715273578,L6,Martinotti,Irregular spiking,13,6,16,,SST+
+20070730E,complete,available,0.622264931,L5,Large Basket,Adapting,5,2,22,,VIP+
+20070731B,complete,available,0.613194483,L5,Large Basket,Fast spiking,11,10,5,,VIP+
+20070807A,complete,available,0.695243499,L5,Martinotti,Irregular spiking,15,2,13,,SST+
+20070807B,complete,available,0.623561054,L5,Martinotti,Irregular spiking,15,1,13,,SST+
+20070807D,complete,available,0.571711903,L5,Large Basket,Irregular spiking,11,1,6,,PV+
+20070809A,complete,available,0.560269105,L5,Martinotti,Regular spiking,15,7,14,,SST+
+20070809B,complete,available,0.606257448,L5,Large Basket,Irregular spiking,11,6,22,,VIP+
+20070809D,complete,available,0.681908405,L5,Martinotti,Irregular spiking,15,7,14,,SST+
+20070815B,complete,available,0.655104945,L5,Martinotti,Adapting,20,2,13,,SST+
+20070815C,complete,available,0.684565536,L5,Large Basket,Regular spiking,11,7,19,,VIP+
+20070817D,complete,available,0.658908969,L5,Large Basket,Adapting,20,5,13,,VIP+
+20070903B,complete,available,0.632448971,L5,Martinotti,Fast spiking,15,7,14,,SST+
+20071009C,complete,available,0.634224989,L5,Martinotti,Fast spiking,20,10,15,,VIP+
+20071010A,complete,available,0.642934172,L5,Large Basket,Adapting,15,7,14,,SST+
+20071025A,complete,available,0.707956894,L5,Large Basket,Fast spiking,20,9,16,,VIP+
+20071103A,complete,available,0.676382414,L5,Large Basket,Fast spiking,11,10,5,,PV+
+20071104C,complete,available,0.610491142,L5,Large Basket,Fast spiking,11,10,5,,PV+
+20071104D,complete,available,0.611709323,L5,Large Basket,Irregular spiking,11,1,6,,PV+
+20071109B,complete,available,0.62444703,L5,Large Basket,Adapt./irreg. spiking,13,2,13,,SST+
+20071109C,complete,available,0.676211206,L5,Large Basket,Irregular spiking,20,2,22,,VIP+
+20071114B,complete,available,0.669557105,L5,Translaminar,Fast spiking,20,12,15,,VIP+
+20071115A,complete,available,0.614131905,L5,Large Basket,Fast spiking,11,10,5,,PV+
+20071115B,complete,available,0.594992631,L5,Martinotti,Irregular spiking,15,6,16,,SST+
+20071116A,complete,available,0.636472328,L5,Large Basket,Adapting,15,2,13,,SST+
+20080813A,complete,available,0.693891779,L5,Large Basket,Adapting,15,5,22,,VIP+
+20080816A,complete,available,0.691029633,L5,Large Basket,Adapting,15,7,16,,SST+
+20080816D,complete,available,0.65101267,L5,Large Basket,Fast spiking,11,7,5,,PV+
+20080822B,complete,available,0.527571675,L5,Small Basket,Fast spiking,12,10,5,,PV+
+20080826A,complete,available,0.662541072,L5,Large Basket,Fast spiking,11,10,5,,PV+
+20080826B,complete,available,0.634427047,L5,Large Basket,Adapting,15,2,13,,SST+
+20080826D,complete,available,0.636483531,L5,Large Basket,Adapting,5,7,20,,PV-/SST-/VIP-
+20080827B,complete,available,0.702060875,L5,Large Basket,Regular spiking,11,2,22,,VIP+
+20080827C,complete,available,0.563863833,L5,Martinotti,Adapting,15,7,14,,SST+
+20080902A,complete,available,0.650161876,L5,Small Basket,Irregular spiking,11,10,5,,PV+
+20080902B,complete,available,0.609729705,L5,Martinotti,Irregular spiking,15,7,14,,SST+
+20080903A,complete,available,0.59092835,L5,Large Basket,Fast spiking,11,10,5,,PV+
+20080903D,complete,available,0.622303996,L5,Large Basket,Adapting,12,5,13,,VIP+
+20080909B,complete,available,0.624622797,L5,Martinotti,Adapting,20,2,13,,SST+
+20080911A,complete,available,0.765440909,L6,Large Basket,Fast spiking,17,8,7,,PV+
+20080911B,complete,available,0.707550839,L5,Chandelier,Fast spiking,16,10,7,,PV+
+20080911C,complete,available,0.554807263,L5,Martinotti,Adapt./irreg. spiking,15,2,13,,SST+
+20080913A,complete,available,0.704542852,L5,Large Basket,Adapting,13,6,16,,SST+
+20080913C,complete,available,0.656759857,L5,Large Basket,Fast spiking,11,10,5,,PV+
+20080913D,complete,available,0.702769942,L5,Large Basket,Fast spiking,20,7,14,,PV+
+20080926B,complete,available,0.582551492,L5,Large Basket,Fast spiking,11,10,5,,PV+
+20080926E,complete,available,0.683532417,L5,Large Basket,Fast spiking,5,10,5,,PV+
+20080928B,complete,available,0.663978072,L5,Chandelier,Fast spiking,16,8,7,,PV+
+20080929A,complete,available,0.623368285,L5,Large Basket,Fast spiking,12,10,5,,VIP+
+20080929C,complete,available,0.63903457,L5,Large Basket,Fast spiking,15,10,5,,VIP+
+20081001A,complete,available,0.693537209,L5,Large Basket,Regular spiking,11,2,23,,VIP+
+20081001B,complete,available,0.640881798,L5,Large Basket,Fast spiking,11,10,5,,PV+
+20081001C,complete,available,0.593282637,L5,Large Basket,Irregular spiking,12,2,22,,VIP+
+20081006C,complete,available,0.588771442,L5,Martinotti,Adapting,15,7,14,,SST+
+20081010B,complete,available,0.696398859,L5,Large Basket,Adapting,13,4,13,,SST+
+20110124A,complete,available,0.832605923,L6,Translaminar,Fast spiking,14,9,25,,PV+
+20110125A,complete,available,0.831057266,L6,Large Basket,Fast spiking,17,9,25,,PV+
+20110125B,complete,available,0.835855111,L6,Martinotti,Fast spiking,19,9,25,,SST+
+20110125C,complete,available,0.82564203,L6,Martinotti,Fast spiking,19,9,25,,SST+
+20110131A,complete,available,0.763046183,L6,Translaminar,Fast spiking,20,9,16,,PV+
+20110207A,complete,available,0.800480376,L6,Large Basket,Fast spiking,17,9,25,,PV+
+20110207B,complete,available,0.842806794,L6,Large Basket,Fast spiking,17,9,25,,VIP+
+20110209B,complete,available,0.757906759,L6,Martinotti,Fast spiking,20,6,16,,SST+
+20110211A,complete,available,0.853690297,L6,Large Basket,Fast spiking,18,13,25,,VIP+
+20110301A,complete,available,0.71967999,L6,Large Basket,Fast spiking,19,11,25,,SST+
+20110303A,complete,available,0.82612217,L6,Large Basket,Fast spiking,18,9,25,,SST+
+20110303B,complete,available,0.837040164,L6,Large Basket,Irregular spiking,20,1,13,,PV+
+20110303C,complete,available,0.831240457,L6,Martinotti,Fast spiking,19,9,25,,SST+
+20110309B,complete,available,0.731061565,L6,Translaminar,Fast spiking,20,9,16,,VIP+
+20110310C,complete,available,0.775596118,L6,Large Basket,Fast spiking,18,10,24,,PV+
+20110425A,complete,available,0.745277414,L6,Large Basket,Fast spiking,19,11,25,,VIP+
+20110425B,complete,available,0.813533938,L6,Large Basket,Fast spiking,17,10,25,,PV+
+20110426A,complete,available,0.868861045,L6,Martinotti,Fast spiking,15,11,16,,SST+
+20110428A,complete,available,0.855774045,L6,Large Basket,Fast spiking,18,9,25,,PV+
+20110429C,complete,available,0.840720946,L6,Large Basket,Fast spiking,17,10,25,,PV+
+20110429D,complete,available,0.809093765,L6,Large Basket,Fast spiking,19,11,25,,SST+
+20110516A,complete,available,0.757066788,L6,Large Basket,Fast spiking,11,2,8,,PV+
+20110517A,complete,available,0.926786192,L6,Large Basket,Fast spiking,18,10,5,,PV+
+20110517C,complete,available,0.894396393,L6,Large Basket,Fast spiking,18,10,8,,PV+
+20110523A,complete,available,0.853157998,L6,Large Basket,Fast spiking,20,10,15,,PV+
+20110525A,complete,available,0.776018089,L6,Large Basket,Fast spiking,20,9,16,,VIP+
+20110526A,complete,available,0.902504306,L6,Large Basket,Fast spiking,18,10,5,,PV+
+20110530A,complete,available,0.717302207,L6,Small Basket,Fast spiking,20,10,15,,VIP+
+20110606A,complete,available,0.820276278,L6,Large Basket,Fast spiking,11,10,25,,PV+
+20110613B,complete,available,0.81455601,L6,Large Basket,Fast spiking,17,10,25,,VIP+
+20110614B,complete,available,0.829776061,L6,Large Basket,Fast spiking,11,9,25,,PV+
+20110705A,complete,available,0.896875331,L6,Large Basket,Fast spiking,18,11,8,,VIP+
+20110705B,complete,available,0.875483839,L6,Large Basket,Fast spiking,18,10,8,,PV+
+20110706A,complete,available,0.892459285,L6,Large Basket,Fast spiking,18,10,8,,PV+
+20110707A,complete,available,0.789754621,L6,Large Basket,Adapting,20,6,25,,VIP+
+20110822C,complete,available,0.820771721,L6,Large Basket,Adapting,18,10,24,,PV+
+20110830A,complete,available,0.76129058,L6,Chandelier,Fast spiking,16,7,7,,PV+
+20110913A,complete,available,0.778461381,L6,Large Basket,Regular spiking,20,7,19,,VIP+
+20110920A,complete,available,0.896520208,L6,Large Basket,Fast spiking,14,10,7,,PV+
+20110920B,complete,available,0.798816857,L6,Large Basket,Adapting,18,7,25,,SST+
+20110923B,complete,available,0.715868479,L6,Large Basket,Fast spiking,20,10,5,,PV+
+20110928A,complete,available,0.844308083,L6,Large Basket,Fast spiking,20,10,5,,PV+
+20111003A,complete,available,0.893558144,L6,Large Basket,Regular spiking,18,2,23,,PV+
+20111005A,complete,available,0.777564478,L6,Large Basket,Irregular spiking,17,2,23,,VIP+
+20111005B,complete,available,0.857180175,L6,Large Basket,Fast spiking,18,10,24,,PV+
+20111025B,complete,available,0.890977311,L6,Large Basket,Fast spiking,18,2,23,,PV+
+20111026B,complete,available,0.86811963,L6,Martinotti,Fast spiking,20,10,15,,PV+
+20111102B,complete,available,0.873875744,L6,Large Basket,Fast spiking,18,10,24,,PV+
+20111122A,complete,available,0.863244813,L6,Large Basket,Fast spiking,20,10,24,,PV+
+20111207C,complete,available,0.841203632,L6,Large Basket,Fast spiking,18,10,24,,PV+
+20111209A,complete,available,0.814075902,L6,Large Basket,Adapt./irreg. spiking,17,2,23,,VIP+
+20111212A,complete,available,0.830556031,L6,Large Basket,Fast spiking,17,7,25,,VIP+
+20111213A,complete,available,0.909449786,L6,Large Basket,Regular spiking,18,7,25,,SST+
+20111213B,complete,available,0.789817544,L6,Martinotti,Adapting,20,2,13,,SST+
+20111214B,complete,available,0.786907865,L6,Large Basket,Regular spiking,17,2,23,,VIP+
+20111215A,complete,available,0.791048404,L6,Large Basket,Fast spiking,18,10,24,,PV+
+20111215B,complete,available,0.896159825,L6,Large Basket,Regular spiking,11,7,19,,VIP+
+20111219B,complete,available,0.874802954,L6,Neurogliaform,Regular spiking,5,6,20,,PV-/SST-/VIP-
+20111219C,complete,available,0.819361985,L6,Large Basket,Fast spiking,11,10,5,,PV+
+20120111B,complete,available,0.896219762,L6,Large Basket,Fast spiking,14,10,7,,PV+
+20120116A,complete,available,0.747243081,L6,Large Basket,Fast spiking,11,10,24,,PV+
+20120118B,complete,available,0.837313794,L6,Small Basket,Regular spiking,5,7,20,PV-/SST-,PV-/SST-/VIP-
+20120119B,complete,available,0.820711066,L6,Large Basket,Fast spiking,13,9,8,,VIP+
+20120120B,complete,available,0.76516673,L6,Large Basket,Adapting,17,7,8,PV-/SST-,VIP+
+20120123A,complete,available,0.8104693,L6,Large Basket,Fast spiking,18,9,25,PV-/SST-,PV+
+20120201A,complete,available,0.768231643,L6,Large Basket,Adapting,19,7,25,PV-,VIP+
+20120215A,complete,available,0.902486143,L6,Large Basket,Regular spiking,18,1,6,PV+,PV+
+20120215B,complete,available,0.902941456,L6,Small Basket,Fast spiking,5,2,6,PV+,PV+
+20150311C,complete,available,0.800781748,L6,Translaminar,Adapting,19,7,14,,SST+
