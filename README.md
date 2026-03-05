@@ -1,4 +1,4 @@
-# Morphoelectric properties of inhibitory neurons shift gradually along the depth of the cerebral cortex 
+# Morphoelectric properties of inhibitory neurons shift gradually and regardless of cell type along the depth of the cerebral cortex
 
 - Understanding the diversity of inhibitory neurons (INHs) in the cerebral cortex will be critical to understand cortical function. 
 
