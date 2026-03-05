@@ -1,0 +1,47 @@
+[
+    {
+        "species_area": "Rat vS1",
+        "metadata_path": "rat_bc/bc_metadata.csv",
+        "features_path": "rat_bc/processed/bc_consolidated_features.csv",
+        "molecular_col": "pred_mol_id",
+        "molecular_map": {
+            "PV+": "PV",
+            "SST+": "Sst",
+            "VIP+": "Vip",
+            "PV-/SST-/VIP-": "Lamp5"
+        }
+    },
+    {
+        "species_area": "Mouse V1",
+        "metadata_path": "mouse_v1/v1_patchseq_metadata.csv",
+        "features_path": "mouse_v1/processed/v1_patchseq_features.csv",
+        "molecular_col": "t_cluster",
+        "molecular_map": {
+            "Pvalb": "PV",
+            "Sncg": "Vip",
+            "Serpinf1": "Vip"
+        }
+    },
+    {
+        "species_area": "Mouse M1",
+        "metadata_path": "mouse_m1/m1_patchseq_metadata.csv",
+        "features_path": "mouse_m1/processed/m1_patchseq_features.csv",
+        "molecular_col": "molecular_identity",
+        "molecular_map": {
+            "Pvalb": "PV",
+            "Sncg": "Vip"
+        }
+    },
+    {
+        "species_area": "Human MTG",
+        "metadata_path": "human_mtg/mtg_patchseq_metadata.csv",
+        "features_path": "human_mtg/processed/mtg_patchseq_features.csv",
+        "molecular_col": "molecular_identity",
+        "molecular_map": {
+            "PVALB": "PV",
+            "SST": "Sst",
+            "VIP": "Vip",
+            "LAMP5/PAX6/Other": "Lamp5"
+        }
+    }
+]
