@@ -63,6 +63,7 @@ def create_embedding(
         min_dist=0.2, 
         n_components=2, 
         metric="cosine", 
+        n_jobs=1,
         random_state=seed,
     )
     X_embedding = embedding.fit_transform(X)
