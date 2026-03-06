@@ -96,13 +96,13 @@ def compute_molecular_profiles(
         max_depth = np.nanmax(soma_depth)
     
     # Combine depths and markers into a DataFrame
-    df = pd.DataFrame({"depth": soma_depth, "marker": markers})
+    df = pd.DataFrame({"depth": soma_depth, "marker": markers}).dropna()
     
     # Create depth bins
     depth_bins = np.arange(0, max_depth - depth_bin_width, depth_bin_width)
     
     marker_profiles = []
-    for marker in np.unique(markers):
+    for marker in np.unique(df["marker"]):
         depths = df.loc[df["marker"] == marker, "depth"]
         counts, edges = np.histogram(depths, bins=depth_bins)
         bin_centers = (edges[:-1] + edges[1:]) / 2
@@ -118,11 +118,9 @@ def compute_molecular_profiles(
     profiles = pd.concat(marker_profiles, ignore_index=True)
     
     # Normalize counts to fractions per depth bin (%)
-    profiles = (
-        profiles
-        .groupby("depth", group_keys=False)
-        .apply(lambda g: g.assign(counts=100 * g["counts"] / g["counts"].sum()))
-        .reset_index(drop=True)
+    profiles["counts"] = (
+        100 * profiles["counts"]
+        / profiles.groupby("depth")["counts"].transform("sum")
     )
     
     # Apply moving average smoothing

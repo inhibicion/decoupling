@@ -54,6 +54,9 @@ def hierarchical_clustering(
         method=method,
     )
 
+    if not hasattr(np, "in1d"):
+        np.in1d = np.isin
+
     model = cutreeHybrid(
         link=linkage_matrix,
         distM=distance_matrix,
