@@ -1,3 +1,5 @@
+# https://github.com/AllenInstitute/drcme/blob/master/drcme/ephys_morph_clustering.py
+
 from builtins import map
 from builtins import range
 import numpy as np
@@ -6,26 +8,26 @@ import pandas as pd
 import sklearn.metrics as metrics
 import sklearn.cluster as cluster
 import sklearn.neighbors as neighbors
-import sklearn.manifold as manifold
+# import sklearn.manifold as manifold
 import sklearn.mixture as mixture
-import sklearn.model_selection as model_selection
+# import sklearn.model_selection as model_selection
 
 import scipy.cluster.hierarchy as hierarchy
-import scipy.spatial.distance as distance
+# import scipy.spatial.distance as distance
 
 from hashlib import sha1
-from multiprocessing import Pool
+# from multiprocessing import Pool
 import logging
-import sys
+# import sys
 
 
-def clustjaccard(y_true, y_pred):
-    if type(y_true) is list:
-        y_true = np.array(y_true)
+# def clustjaccard(y_true, y_pred):
+#     if type(y_true) is list:
+#         y_true = np.array(y_true)
 
-    if type(y_pred) is list:
-        y_pred = np.array(y_pred)
-    return float(np.sum(y_true & y_pred)) / (np.sum(y_true) + np.sum(y_pred) - np.sum(y_true & y_pred))
+#     if type(y_pred) is list:
+#         y_pred = np.array(y_pred)
+#     return float(np.sum(y_true & y_pred)) / (np.sum(y_true) + np.sum(y_pred) - np.sum(y_true & y_pred))
 
 
 def all_cluster_calls(specimen_ids, morph_X, ephys_spca,
@@ -45,20 +47,20 @@ def all_cluster_calls(specimen_ids, morph_X, ephys_spca,
     return results_df
 
 
-def usual_key_list(n_nn=[4, 7, 10], weights=[1, 2, 5], n_cl=[10, 15, 20, 25]):
-    key_order = []
+# def usual_key_list(n_nn=[4, 7, 10], weights=[1, 2, 5], n_cl=[10, 15, 20, 25]):
+#     key_order = []
 
-    for cl in n_cl:
-        subkeys = ["hc_conn"]
-        for k in subkeys:
-            for nn in n_nn:
-                key_order.append("{:s}_{:d}_{:d}".format(k, nn, cl))
+#     for cl in n_cl:
+#         subkeys = ["hc_conn"]
+#         for k in subkeys:
+#             for nn in n_nn:
+#                 key_order.append("{:s}_{:d}_{:d}".format(k, nn, cl))
 
-        subkeys = ["hc_combo", "gmm_combo", "spec_combo"]
-        for k in subkeys:
-            for wt in weights:
-                key_order.append("{:s}_{:g}_{:d}".format(k, wt, cl))
-    return key_order
+#         subkeys = ["hc_combo", "gmm_combo", "spec_combo"]
+#         for k in subkeys:
+#             for wt in weights:
+#                 key_order.append("{:s}_{:g}_{:d}".format(k, wt, cl))
+#     return key_order
 
 
 def hc_nn_cluster_calls(results_df, morph_X, ephys_spca,
@@ -249,74 +251,74 @@ def coclust_rates(shared, clust_labels):
         return cc_rates
 
 
-def subsample_run(original_labels, specimen_ids, morph_X, ephys_spca,
-                  weights=[1, 2, 5], n_cl=[10, 15, 20, 25], n_nn=[4, 7, 10],
-                  n_folds=10, n_iter=1):
+# def subsample_run(original_labels, specimen_ids, morph_X, ephys_spca,
+#                   weights=[1, 2, 5], n_cl=[10, 15, 20, 25], n_nn=[4, 7, 10],
+#                   n_folds=10, n_iter=1):
 
-    run_info_list = [{
-        "iter_number": i,
-        "original_labels": original_labels,
-        "specimen_ids": specimen_ids,
-        "morph_X": morph_X,
-        "ephys_spca": ephys_spca,
-        "weights": weights,
-        "n_cl": n_cl,
-        "n_nn": n_nn,
-        "n_folds": n_folds,
-    } for i in range(n_iter)]
-
-
-#     results = map(individual_subsample_run, run_info_list)
-    p = Pool()
-    logging.info("Starting multiprocessing")
-    results = []
-    for i, res in enumerate(p.imap_unordered(individual_subsample_run, run_info_list, 1)):
-        sys.stderr.write('\rdone {0:%}'.format(float(i + 1)/len(run_info_list)))
-        results.append(res)
-
-    jaccards = np.hstack(results)
-    return jaccards
+#     run_info_list = [{
+#         "iter_number": i,
+#         "original_labels": original_labels,
+#         "specimen_ids": specimen_ids,
+#         "morph_X": morph_X,
+#         "ephys_spca": ephys_spca,
+#         "weights": weights,
+#         "n_cl": n_cl,
+#         "n_nn": n_nn,
+#         "n_folds": n_folds,
+#     } for i in range(n_iter)]
 
 
-def individual_subsample_run(run_info):
-    i = run_info["iter_number"]
-    original_labels = run_info["original_labels"]
-    specimen_ids = run_info["specimen_ids"]
-    morph_X = run_info["morph_X"]
-    ephys_spca = run_info["ephys_spca"]
-    weights = run_info["weights"]
-    n_cl = run_info["n_cl"]
-    n_nn = run_info["n_nn"]
-    n_folds = run_info["n_folds"]
+# #     results = map(individual_subsample_run, run_info_list)
+#     p = Pool()
+#     logging.info("Starting multiprocessing")
+#     results = []
+#     for i, res in enumerate(p.imap_unordered(individual_subsample_run, run_info_list, 1)):
+#         sys.stderr.write('\rdone {0:%}'.format(float(i + 1)/len(run_info_list)))
+#         results.append(res)
 
-    orig_labels_uniq = np.sort(np.unique(original_labels))
-
-    jaccards = np.zeros((len(orig_labels_uniq), n_folds))
-
-    kf = model_selection.KFold(n_splits=n_folds, shuffle=True, random_state=i)
-    counter = 0
-    for train_index, _ in kf.split(original_labels):
-#         print "running {:d} {:d}".format(i, counter)
-        subsample_results = all_cluster_calls(specimen_ids[train_index],
-                                              morph_X[train_index, :],
-                                              ephys_spca.iloc[train_index, :],
-                                              weights=weights,
-                                              n_cl=n_cl,
-                                              n_nn=n_nn)
-        subsample_labels, _, _ = consensus_clusters(subsample_results.values[:, 1:])
-
-        sub_uniq = np.sort(np.unique(subsample_labels))
-        for ii, orig_cl in enumerate(orig_labels_uniq):
-            jacc = []
-            y_orig = original_labels[train_index] == orig_cl
-            for sub_cl in sub_uniq:
-                y_sub = subsample_labels == sub_cl
-                jacc.append(clustjaccard(y_orig, y_sub))
-            jaccards[ii, counter] = np.max(jacc)
-        counter += 1
-
-    return jaccards
+#     jaccards = np.hstack(results)
+#     return jaccards
 
 
-def sort_order(clust_labels):
-    return np.lexsort((clust_labels,))
+# def individual_subsample_run(run_info):
+#     i = run_info["iter_number"]
+#     original_labels = run_info["original_labels"]
+#     specimen_ids = run_info["specimen_ids"]
+#     morph_X = run_info["morph_X"]
+#     ephys_spca = run_info["ephys_spca"]
+#     weights = run_info["weights"]
+#     n_cl = run_info["n_cl"]
+#     n_nn = run_info["n_nn"]
+#     n_folds = run_info["n_folds"]
+
+#     orig_labels_uniq = np.sort(np.unique(original_labels))
+
+#     jaccards = np.zeros((len(orig_labels_uniq), n_folds))
+
+#     kf = model_selection.KFold(n_splits=n_folds, shuffle=True, random_state=i)
+#     counter = 0
+#     for train_index, _ in kf.split(original_labels):
+# #         print "running {:d} {:d}".format(i, counter)
+#         subsample_results = all_cluster_calls(specimen_ids[train_index],
+#                                               morph_X[train_index, :],
+#                                               ephys_spca.iloc[train_index, :],
+#                                               weights=weights,
+#                                               n_cl=n_cl,
+#                                               n_nn=n_nn)
+#         subsample_labels, _, _ = consensus_clusters(subsample_results.values[:, 1:])
+
+#         sub_uniq = np.sort(np.unique(subsample_labels))
+#         for ii, orig_cl in enumerate(orig_labels_uniq):
+#             jacc = []
+#             y_orig = original_labels[train_index] == orig_cl
+#             for sub_cl in sub_uniq:
+#                 y_sub = subsample_labels == sub_cl
+#                 jacc.append(clustjaccard(y_orig, y_sub))
+#             jaccards[ii, counter] = np.max(jacc)
+#         counter += 1
+
+#     return jaccards
+
+
+# def sort_order(clust_labels):
+#     return np.lexsort((clust_labels,))
