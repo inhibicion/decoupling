@@ -27,11 +27,11 @@ jobs:
           pip install pytest pytest-cov
 
       - name: Run tests with coverage
-        run: |
-          pytest --cov --cov-branch --cov-report=xml
+        run: pytest --cov=decoupling --cov-branch --cov-report=xml:coverage.xml
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: inhibicion/decoupling
+          files: coverage.xml
