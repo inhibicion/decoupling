@@ -2,7 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/)
 ![Continuous Integration](https://github.com/inhibicion/decoupling/actions/workflows/ci.yml/badge.svg)
-[![Coverage](https://codecov.io/gh/inhibicion/decoupling/branch/main/graph/badge.svg)](https://codecov.io/gh/inhibicion/decoupling)
+[![Coverage](https://codecov.io/gh/inhibicion/decoupling/graph/badge.svg?token=6Q2EIKOFQR)](https://codecov.io/gh/inhibicion/decoupling)
 
 - We quantify morphological and electrophysiological properties of inhibitory neurons across cortical depth.
 
