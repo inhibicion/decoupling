@@ -54,6 +54,8 @@ def hierarchical_clustering(
         method=method,
     )
 
+    # Ensure compatibility with dynamicTreeCut, which still uses np.in1d.
+    # np.in1d was removed in newer NumPy versions, so it is aliased to np.isin.
     if not hasattr(np, "in1d"):
         np.in1d = np.isin
 
