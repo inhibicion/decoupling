@@ -8,10 +8,10 @@ from scipy.spatial.distance import pdist
 from scipy.cluster.hierarchy import linkage
 from dynamicTreeCut import cutreeHybrid
 
-from .base import BaseModel
-from .ephys_morph_clustering import consensus_clusters
-from ..utils.preprocessing import align_inputs, preprocess_features
-from ..utils.postprocessing import remap_labels
+from decoupling.models.base import BaseModel
+from decoupling.models.ephys_morph_clustering import consensus_clusters
+from decoupling.utils.preprocessing import align_inputs, preprocess_features
+from decoupling.utils.postprocessing import remap_labels
 
 ##########################################################################################
 ### HELPER FUNCTIONS

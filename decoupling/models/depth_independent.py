@@ -8,7 +8,7 @@ import pandas as pd
 from functools import reduce
 from typing import Any, Iterable
 
-from .base import BaseModel
+from decoupling.models.base import BaseModel
 
 ##########################################################################################
 ### HELPER FUNCTIONS

@@ -1,10 +1,10 @@
 # decoupling/cluster/__init__.py
 
-from .base import BaseModel
-from .consensus import ConsensusClustering
-from .hierarchical import HierarchicalClustering
-from .depth_independent import Decoupling
-from .ephys_morph_clustering import all_cluster_calls, consensus_clusters
+from decoupling.models.base import BaseModel
+from decoupling.models.consensus import ConsensusClustering
+from decoupling.models.hierarchical import HierarchicalClustering
+from decoupling.models.depth_independent import Decoupling
+from decoupling.models.ephys_morph_clustering import all_cluster_calls, consensus_clusters
 
 __all__ = [
     "BaseModel",

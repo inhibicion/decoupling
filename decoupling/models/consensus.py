@@ -6,11 +6,11 @@ import pandas as pd
 
 from sklearn.ensemble import RandomForestClassifier
 
-from .base import BaseModel
-from .ephys_morph_clustering import all_cluster_calls, consensus_clusters
-from ..utils.preprocessing import align_inputs, preprocess_features
-from ..utils.postprocessing import remap_labels
-from ..metrics.clusters import count_per_cluster
+from decoupling.models.base import BaseModel
+from decoupling.models.ephys_morph_clustering import all_cluster_calls, consensus_clusters
+from decoupling.utils.preprocessing import align_inputs, preprocess_features
+from decoupling.utils.postprocessing import remap_labels
+from decoupling.metrics.clusters import count_per_cluster
 
 ##########################################################################################
 ### HELPER FUNCTIONS
