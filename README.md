@@ -1,8 +1,8 @@
 # Morphoelectric properties of inhibitory neurons shift gradually and regardless of cell type along the depth of the cerebral cortex
 
 [![Python Version](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/inhibicion/decoupling/main.yml?branch=main)](https://github.com/inhibicion/decoupling/actions)
-[![Coverage](https://img.shields.io/codecov/c/github/inhibicion/decoupling/main)](https://codecov.io/gh/inhibicion/decoupling)
+![Continuous Integration](https://github.com/inhibicion/decoupling/actions/workflows/ci.yml/badge.svg)
+[![Coverage](https://codecov.io/gh/inhibicion/decoupling/branch/main/graph/badge.svg)](https://codecov.io/gh/inhibicion/decoupling)
 
 - We quantify morphological and electrophysiological properties of inhibitory neurons across cortical depth.
 
