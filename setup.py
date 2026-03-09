@@ -10,11 +10,13 @@ setup(
     packages=find_packages(include=["decoupling", "decoupling.*"]),
     install_requires=[
         "numpy",
-        "pandas",
         "scipy",
+        "pandas",
         "scikit-learn",
         "matplotlib",
+        "seaborn",
         "umap-learn",
+        "dynamicTreeCut",
     ],
     extras_require={
         "dev": ["pytest", "black", "flake8", "mypy"]

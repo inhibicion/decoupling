@@ -5,10 +5,13 @@ requires-python = ">=3.9"
 
 dependencies = [
     "numpy",
+    "scipy",
     "pandas",
     "scikit-learn",
     "matplotlib",
     "seaborn",
+    "umap-learn",
+    "dynamicTreeCut",
 ]
 
 [project.optional-dependencies]
