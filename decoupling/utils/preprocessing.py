@@ -10,7 +10,7 @@ from scipy.stats import variation, zscore
 ##########################################################################################
 ### PRE-PROCESSING HELPERS
 ##########################################################################################
-def set_seed(seed: int = 0, verbose: bool = True) -> int:
+def set_seed(seed: int | None = 0, verbose: bool = True) -> int:
     """
     Set the random seed for reproducibility.
 
@@ -27,7 +27,8 @@ def set_seed(seed: int = 0, verbose: bool = True) -> int:
         The seed that was set.
     """
     if seed is None:
-        seed = np.random.randint(0, 2**32 - 1)
+        # Use int32 max for compatibility across platforms
+        seed = np.random.randint(0, np.iinfo(np.int32).max)
 
     random.seed(seed)
     np.random.seed(seed)
