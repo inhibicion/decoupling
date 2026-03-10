@@ -69,3 +69,13 @@ def test_variance_per_sample_size_with_nans():
     df = variance_per_sample_size(X, sample_sizes, n_components=2, n_shuffles=2)
     assert isinstance(df, pd.DataFrame)
     assert df.shape[0] == len(sample_sizes)
+
+#----------------------------------------
+def test_variance_per_sample_size_scale_nonzero():
+    """
+    Ensure that variance_per_sample_size computes a non-zero 95% confidence interval
+    when the input data has variation.
+    """
+    X = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+    df = variance_per_sample_size(X, sample_sizes=[5, 10], n_components=2, n_shuffles=5)
+    assert (df["ci_95"] > 0).all()
