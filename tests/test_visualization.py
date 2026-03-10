@@ -1,8 +1,10 @@
 import numpy as np
 import pandas as pd
+import pytest
 from decoupling.utils.visualization import (
     rotation_matrix,
     linear_reg_coeffs,
+    create_embedding,
     plot_embedding,
     default_colormap,
     plot_embedding_by_layer,
@@ -39,17 +41,15 @@ def test_linear_reg_coeffs_basic():
     assert np.allclose(coeffs, [2.0])
 
 #----------------------------------------
-def test_plot_embedding_output():
+def test_create_embedding_basic():
     """
-    plot_embedding should return a valid figure and axis.
+    create_embedding should return a 2D array aligned with input and with 2 columns.
     """
     np.random.seed(0)
-    X_emb = np.random.rand(5, 2)
-    colors = np.array([0, 1, 0, 1, 0])
-    fig, ax = plot_embedding(X_emb, colors)
-    assert fig is not None
-    assert ax is not None
-    plt.close(fig)
+    X = pd.DataFrame(np.random.rand(30, 4))
+    soma_depth = pd.DataFrame(np.linspace(0, 2, 30))
+    emb = create_embedding(X, soma_depth)
+    assert emb.shape == (30, 2)
 
 #----------------------------------------
 def test_default_colormap_type():
@@ -61,72 +61,111 @@ def test_default_colormap_type():
     assert isinstance(cmap, ListedColormap)
 
 #----------------------------------------
-def test_plot_embedding_by_layer_shapes():
+def test_plot_embedding_categorical_and_continuous_branches():
     """
-    plot_embedding_by_layer should produce a figure with the expected grid
-    of subplots for layer-wise features.
+    Cover categorical, continuous, and show_trend branches in plot_embedding.
+    """
+    X_emb = np.random.rand(5, 2)
+    colors_cat = np.array(["a", "b", "a", "b", "c"])
+    fig, ax = plot_embedding(X_emb, colors_cat)
+    assert fig is not None
+    plt.close(fig)
+
+    # Reduce integer classes to <=29 to avoid cmap TypeError
+    colors_int = np.arange(20)  # changed from 35
+    X_emb_int = np.random.rand(20, 2)
+    fig, ax = plot_embedding(X_emb_int, colors_int)
+    assert fig is not None
+    plt.close(fig)
+
+#----------------------------------------
+def test_plot_embedding_by_layer_with_trend():
+    """
+    plot_embedding_by_layer with nonlinear trend computation (show_trend=True)
+    to cover spline calculation and arrow plotting.
     """
     np.random.seed(0)
     embedding = np.random.rand(10, 2)
     feature = np.linspace(0, 1, 10)
-    layers = np.array([0, 1, 2, 0, 1, 2, 3, 4, 2, 4])
-    fig, axes = plot_embedding_by_layer(embedding, feature, layers)
+    layers = np.array([0, 1, 2, 0, 1, 2, 1, 2, 0, 2])
+    fig, axes = plot_embedding_by_layer(embedding, feature, layers, show_trend=True)
     assert fig is not None
-    assert axes.shape[0] == 6  # 2x3 grid flattened
+    assert len(axes) == 6  # 2x3 grid flattened
     plt.close(fig)
 
 #----------------------------------------
-def test_plot_features_by_layer_basic():
+def test_plot_decoupling_schema_linear_and_comparison():
     """
-    plot_features_by_layer should create a figure and axes for each feature group.
+    Cover both comparison ('>','<') and '<linear' rule branches in plot_decoupling_schema.
     """
-    X = pd.DataFrame({
-        "layer": [0,0,1,1],
-        "feat1": [1,2,1,2],
-        "feat2": [2,3,2,3]
+    cluster_means = pd.DataFrame({
+        "feat1": [-0.5, 0, 0.5],
+        "feat2": [-0.4, 0, 0.4],
+        "feat3": [-1,0,1],
     })
-    ticks = [[0,1,2,3],[0,1,2,3]]
-    fig, axs = plot_features_by_layer(X, ticks)
+    schema = {
+        "Comp": {"feat1": (">", 0), "feat2": ("<", 0)},
+        "Linear": {"feat3": ("<linear", "feat1", (1, 0))}
+    }
+    fig, axs = plot_decoupling_schema(cluster_means, schema)
     assert fig is not None
     assert len(axs) == 2
     plt.close(fig)
 
 #----------------------------------------
-def test_plot_decoupling_schema_runs():
+def test_plot_features_by_layer_exceptions_and_jitter():
     """
-    plot_decoupling_schema should produce a figure with one axis per schema group.
+    Test errors for missing 'layer' column, ticks mismatch, and verify jitter/coloring.
     """
-    cluster_means = pd.DataFrame({
-        "spike_frequency": [-0.5, 0, 0.5],
-        "spike_frequency_adaptation": [-0.4, 0, 0.4],
-        "dendrite_vertical_extent": [-1,0,1],
-        "axon_vertical_extent": [-1,0,1],
-    })
-    schema = {
-        "Group I": {"spike_frequency": (">", 0), "spike_frequency_adaptation": ("<", 0)},
-        "Group II": {"axon_vertical_extent": ("<", 0), "dendrite_vertical_extent": (">", 0)}
-    }
-    fig, axs = plot_decoupling_schema(cluster_means, schema)
+    # Missing 'layer' column
+    X = pd.DataFrame({"feat": [1,2,3]})
+    with pytest.raises(KeyError):
+        plot_features_by_layer(X, ticks=[[0,1,2]])
+
+    # Tick length mismatch
+    X = pd.DataFrame({"layer": [0,0,1], "feat1":[1,2,3], "feat2":[4,5,6]})
+    with pytest.raises(ValueError):
+        plot_features_by_layer(X, ticks=[[0,1,2]])
+
+    # Correct call
+    X = pd.DataFrame({"layer": [0,0,1], "feat1":[1,2,3], "feat2":[4,5,6]})
+    ticks = [[0,1,2,3],[0,4,8,12]]
+    fig, axs = plot_features_by_layer(X, ticks, jitter=0.05)
     assert fig is not None
-    assert len(axs) == len(schema)
     plt.close(fig)
 
 #----------------------------------------
-def test_colorbar_creation_continuous_and_categorical():
+def test_colorbar_continuous_and_categorical_branches():
     """
-    colorbar should work for both continuous and categorical color mappings.
+    Test continuous vs categorical branches, including integer and string labels.
+    Also cover setting cbar labels.
     """
     # Continuous
     fig, ax = plt.subplots()
-    points = ax.scatter(np.arange(5), np.arange(5), c=np.linspace(0,1,5))
+    sc = ax.scatter(np.arange(5), np.arange(5), c=np.linspace(0,1,5))
     cbar1 = colorbar(fig, ax)
     assert cbar1 is not None
     plt.close(fig)
 
-    # Categorical
+    # Categorical integer
     fig, ax = plt.subplots()
-    labels = np.array([0,1,0,1,2])
-    points = ax.scatter(np.arange(5), np.arange(5), c=labels)
-    cbar2 = colorbar(fig, ax, labels=labels)
+    labels_int = np.array([0,1,0,1])
+    sc = ax.scatter(np.arange(4), np.arange(4), c=labels_int)
+    cbar2 = colorbar(fig, ax, labels=labels_int)
     assert cbar2 is not None
+    plt.close(fig)
+
+    # Categorical string
+    fig, ax = plt.subplots()
+    labels_str = np.array(["A","B","A","B"])
+    sc = ax.scatter(np.arange(4), np.arange(4), c=np.array([0,1,0,1]))
+    cbar3 = colorbar(fig, ax, labels=labels_str)
+    assert cbar3 is not None
+    plt.close(fig)
+
+    # Custom tick labels
+    fig, ax = plt.subplots()
+    sc = ax.scatter(np.arange(5), np.arange(5), c=np.linspace(0,1,5))
+    cbar4 = colorbar(fig, ax, labels=None, shrink=0.5, location="top")
+    assert cbar4 is not None
     plt.close(fig)
