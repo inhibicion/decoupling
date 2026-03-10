@@ -54,6 +54,9 @@ def create_embedding(
     5. Apply flips and rotations to align geometry to soma depth.
     6. Shift layers horizontally for visualization.
     """
+    # Ensure soma_depth is 1D
+    soma_depth = soma_depth.squeeze()
+
     # Step 1: Make sure X and soma_depth are aligned
     X, soma_depth = X.align(soma_depth, join="inner", axis=0)
     
